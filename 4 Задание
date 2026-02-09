@@ -1,0 +1,27 @@
+weight_str, height_str = input ("Введите ваш вес (кг) и рост (м) через пробел (например: 70 1.75):").split()
+
+def calculate_bmi(weight, height):
+    return weight / (height * height)
+
+def get_bmi_category(bmi):
+    underweight_limit = 18.5
+    normal_limit = 25.0
+    overweight_limit = 30.0
+
+    if bmi < underweight_limit:
+        return "недостаточный вес"
+    elif bmi < normal_limit:
+        return "нормальный вес"
+    elif bmi < overweight_limit:
+        return "избыточный вес"
+    else:
+        return "ожирение"
+
+weight = float(weight_str)
+height = float(height_str)
+
+bmi = calculate_bmi(weight, height)
+category = get_bmi_category(bmi)
+
+print(f" Baш Индекс Массы Тела (ИМТ): {bmi:.1f}")
+print (f"Категория: {category}.")
