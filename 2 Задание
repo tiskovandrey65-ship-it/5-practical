@@ -1,0 +1,16 @@
+import math
+
+def calculate_rectangle(width, height):
+    return width * height
+
+def calculate_circle(radius):
+    return math.pi * radius * radius
+
+wigth = float(input("Введите ширину прямоугольника: "))
+height = float(input("Введите высоту прямоугольника: "))
+rectangle = calculate_rectangle(wigth, height)
+print(f"Площадь прямогулника: {rectangle:.2f}")
+
+radius = float(input("Введите радиус круга: "))
+circle = calculate_circle(radius)
+print(f"Площадь круга: {circle:.2f}")
